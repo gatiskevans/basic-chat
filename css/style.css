@@ -35,10 +35,11 @@ div#message {
 #main {
     border: 1px solid black;
     border-radius: 6px;
-    margin: 25px 20px 20px 20px;
+    margin: 50px auto;
     padding: 25px 20px 20px 20px;
     background-image: linear-gradient(#C0C0C0, #E8E8E8);
     inline-size: max-content;
+
 }
 
 b.error {
@@ -55,4 +56,15 @@ b.error {
     border-radius: 6px;
     font-size: 18px;
     background-color: #F8F8F8;
+}
+
+#title {
+    border: 1px solid black;
+    border-radius: 6px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    margin: 0 0 20px 0;
+    background-image: linear-gradient(#A8A8A8, #B8B8B8);
+    font-size: 20px;
+    letter-spacing: 2px;
 }

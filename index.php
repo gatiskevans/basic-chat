@@ -2,7 +2,6 @@
 
     require_once 'vendor/autoload.php';
     require_once 'app/Isset.php';
-    require_once 'app/Dump.php';
 
     use App\DataHandler;
     use App\Validate;
@@ -22,21 +21,27 @@
 
 <div id="main">
 
+    <p id="title"><b>ChatBox</b></p>
+
 <?php
+
     if(isset($_POST['submit'])){
         if($validate->checkIfEmpty('nickname', 'message')) {
             $chatData->writeIntoFile($_POST['nickname'], $_POST['message']);
         }
+        header("Location: /");
     }
+
     $chatData->statement();
+
 ?>
 
-    <form action="<?php header("/") ?>" method="post" class="chatbox">
-        <label for="nickname" class="nicknameLabel"><b>Nickname:</b> </label>
-        <input type="text" id="nickname" name="nickname" value="<?= $_POST['nickname'] ?>"><br><br>
-        <label for="message" class="messageLabel"><b>Message:</b> </label>
+    <form action="/" method="post" class="chatbox">
+        <label for="nickname" class="nicknameLabel"><b>Nickname:</b> </label><br>
+        <input type="text" id="nickname" name="nickname"><br><br>
+        <label for="message" class="messageLabel"><b>Message:</b> </label><br>
         <textarea id="message" name="message" placeholder="Enter the message" rows="4" cols="35"></textarea><br><br>
-        <input type="submit" name="submit" class="submit">
+        <input type="submit" name="submit" class="submit" value="Send message">
     </form>
 
 </div>
