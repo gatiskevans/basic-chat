@@ -4,6 +4,7 @@
 
     use League\Csv\Reader;
     use League\Csv\Writer;
+    use League\Csv\Statement;
 
     class DataHandler
     {
@@ -20,14 +21,16 @@
             $this->csvWriter = Writer::createFromPath($this->path, 'a+');
         }
 
-        public function getCsv(): Reader
-        {
-            return $this->csv;
-        }
-
         public function writeIntoFile(string $nickname, string $message): void
         {
             $chatMessage = [$nickname, $message];
             $this->csvWriter->insertOne($chatMessage);
+        }
+
+        public function statement(): void
+        {
+            foreach(Statement::create()->process($this->csv) as $record){
+                echo "<div id='message'><b>{$record['nickname']}</b>: {$record['message']}</div><br>";
+            }
         }
     }

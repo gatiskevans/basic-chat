@@ -1,0 +1,58 @@
+div#message {
+    background-image: linear-gradient(#E8E8E8, #E0E0E0);
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 7px 10px 7px 10px;
+    inline-size: max-content;
+}
+
+.chatbox {
+    background-image: linear-gradient(#D0D0D0, #D3D3D3);
+    border: 1px solid black;
+    inline-size: max-content;
+    text-align: center;
+    border-radius: 6px;
+    padding: 25px 10px 25px 10px;
+}
+
+#nickname {
+    border-radius: 6px;
+}
+
+#message {
+    border-radius: 6px;
+}
+
+.nicknameLabel {
+    font-size: 17px;
+}
+
+.messageLabel {
+    font-size: 17px;
+}
+
+#main {
+    border: 1px solid black;
+    border-radius: 6px;
+    margin: 25px 20px 20px 20px;
+    padding: 25px 20px 20px 20px;
+    background-image: linear-gradient(#C0C0C0, #E8E8E8);
+    inline-size: max-content;
+}
+
+b.error {
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 6px;
+    padding: 7px 10px 7px 10px;
+    color: red;
+    background-image: linear-gradient(#E8E8E8, #E0E0E0);
+}
+
+.submit {
+    text-align: center;
+    border-radius: 6px;
+    font-size: 18px;
+    background-color: #F8F8F8;
+}
