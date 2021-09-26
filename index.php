@@ -40,7 +40,7 @@
         <label for="nickname" class="nicknameLabel"><b>Nickname:</b> </label><br>
         <input type="text" id="nickname" name="nickname"><br><br>
         <label for="message" class="messageLabel"><b>Message:</b> </label><br>
-        <textarea id="message" name="message" placeholder="Enter the message" rows="4" cols="35"></textarea><br><br>
+        <textarea id="textMessage" name="message" placeholder="Enter the message" rows="4" cols="35"></textarea><br><br>
         <input type="submit" name="submit" class="submit" value="Send message">
     </form>
 

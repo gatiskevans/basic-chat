@@ -30,6 +30,7 @@
         public function statement(): void
         {
             foreach(Statement::create()->process($this->csv) as $record){
+                $record['message'] = wordwrap($record['message'], 50, "<br>");
                 echo "<div id='message'><b>{$record['nickname']}</b>: {$record['message']}</div><br>";
             }
         }
