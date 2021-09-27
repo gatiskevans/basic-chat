@@ -1,13 +1,13 @@
 <?php
 
-    require_once 'vendor/autoload.php';
-    require_once 'app/Isset.php';
+require_once 'vendor/autoload.php';
+require_once 'app/Isset.php';
 
-    use App\DataHandler;
-    use App\Validate;
+use App\DataHandler;
+use App\Validate;
 
-    $chatData = new DataHandler('data/chat.csv');
-    $validate = new Validate();
+$chatData = new DataHandler('data/chat.csv');
+$validate = new Validate();
 
 ?>
 
@@ -23,10 +23,10 @@
 
     <p id="title"><b>ChatBox</b></p>
 
-<?php
+    <?php
 
-    if(isset($_POST['submit'])){
-        if($validate->checkIfEmpty('nickname', 'message')) {
+    if (isset($_POST['submit'])) {
+        if ($validate->checkIfEmpty('nickname', 'message')) {
             $chatData->writeIntoFile($_POST['nickname'], $_POST['message']);
         }
         header("Location: /");
@@ -34,7 +34,7 @@
 
     $chatData->statement();
 
-?>
+    ?>
 
     <form action="/" method="post" class="chatbox">
         <label for="nickname" class="nicknameLabel"><b>Nickname:</b> </label><br>
